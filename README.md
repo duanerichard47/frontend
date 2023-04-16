@@ -68,3 +68,68 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+node.js installed
+npx create-react-app [ my-app ]
+cd [ my-app ]
+npm start
+
+(bootswatch website for css file)
+frontend: npm install react-bootstrap 
+
+cdnjs.com  font awesome for icons
+
+frontend: npm install react-router-dom react-router-bootstrap
+
+if problem with importing [{} from'react-router-dom'] frontend:npm i --save-dev @types/react-router-dom --force 
+react router instructor using is 5.2.0 Routing does not work so have to change syntax or downgrade router versions.
+
+Django
+global  pip install virtualenv
+global virtualenv [myenv]
+global myenv\scripts\activate  -doesnt work (powershell try powershell -ExecutionPolicy Bypass my\scripts\activate)
+  (then click view>command pallete> type python:select interpreter. select global non-env)
+pip list
+pip install django
+django-admin startproject [backend]
+backend: python manage.py runserver
+backend: [optional] python manage.py migrate(warning popped up on mine but not instructors)
+backend: python manage.py startapp base
+
+add 'base.apps.BaseConfig', to settings.py file (under installed apps)
+
+backend: python manage.py runserver (to run the server)
+
+backend: pip install djangorestframework
+add 'rest_framework', to settings.py file
+
+ section 3.13
+frontend: npm install axios
+
+backend: pip install django-cors-headers
+
+add 'corsheaders', to settings.py file
+add 'corsheaders.middleware.CorsMiddleware', to settings.py file (under middleware)
+add CORS_ALLOW_ALL_ORIGINS = True to settings.py file 
+frontend package.json add "proxy": "http://127.0.0.1:8000", (so don't have to include it at beginning of front end fetch request)
+
+ProductScreen has second useParam issue end 3.13
+3.14
+backend: python manage.py migrate
+backend: python manage.py createsuperuser  (will be prompted to enter username, email password. Enter fake) duane, duane@email, duane
+jdango admin panel locahlhost:8000/admin/
+3.15
+backend: python manage.py makemigrations
+backend: python manage.py migrate
+ 3.16
+backend: pip install pillow (to be able to add image field to model.py. Will prompt you.)Then run 2 commands for migration
+
+3.17
+
+add MEDIA_URL = '/images/'  and STATICFILES_DIRS = [
+    BASE_DIR / 'static'] and MEDIA_ROOT = BASE_DIR / 'static/images', to settings.py file
+
+3.20
+add Redux DevTools Chrome extension
+fronend: npm install redux react-redux redux-thunk redux-devtools-extension
+frontend : npm install @reduxjs/toolkit (if giving error) look at QA for help
